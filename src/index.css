@@ -1,0 +1,634 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+
+/* StarterPage */
+
+
+body.starter-page {
+  margin: 0;
+  padding: 0;
+  overflow:hidden;
+}
+
+.starter-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Alinhar conteúdo ao topo */
+  min-height: 100vh;
+  padding-top: 310px; /* Espaçamento superior */
+  box-sizing: border-box; /* Para incluir padding no cálculo da altura */
+  background-image: url('https://i.pinimg.com/originals/80/e4/ac/80e4acf5ac644804ba6b328aa8376033.png');
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.starter-page h1 {
+  color: white;
+  font-size: 5em;
+  margin-bottom: 20px;
+}
+
+.starter-page label {
+  color: white;
+  font-size: 20px;
+}
+
+.starter-page input {
+  padding: 8px;
+  margin-bottom: 10px;
+  width: 200px;
+}
+
+.starter-page button {
+  padding: 10px 20px;
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.starter-page button:hover {
+  background-color: #ADD8E6;
+}
+
+
+/* AnimesList */
+
+
+body.animes-list {
+  margin: 0px;
+  padding: 0px;
+  overflow: scroll;
+}
+
+.animes-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: url('https://i.pinimg.com/originals/80/e4/ac/80e4acf5ac644804ba6b328aa8376033.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  margin-top: -3%;
+  margin-left: -27%;
+  margin-right: -23%;
+  margin-bottom: -40%;
+}
+
+
+.animes-list .search-label {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 20px; /* Espaçamento abaixo do texto */
+}
+
+.animes-list .search-container input[type="text"] {
+  padding: 10px; /* Espaçamento interno */
+  margin-bottom: 10px; /* Espaçamento abaixo do input */
+  width: 80%; /* Largura do input */
+  max-width: 500px; /* Largura máxima do input */
+  border: 2px solid blue; /* Bordas azuis */
+  border-radius: 5px; /* Cantos arredondados */
+}
+
+.animes-list button {
+  padding: 10px 20px;
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 30px; /* Espaçamento acima do botão */
+  margin-bottom: 7px; /* Espaçamento abaixo do botão */
+}
+
+.animes-list button:hover {
+  background-color: #ADD8E6;
+}
+
+.animes-list .anime-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.animes-list .anime-container .anime-image {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.animes-list .anime-container .see-more-button {
+  margin-top: 10px;
+}
+.animes-list .anime-container h3 {
+  text-align: center; /* Centraliza o texto */
+  max-width: 50%; /* Define a largura máxima do texto */
+  margin: 0 auto; /* Centraliza o elemento horizontalmente */
+  font-size: 1.3em; /* Aumenta o tamanho da fonte */
+  color: black;
+}
+.anime-title {
+  font-size: 2.0em;
+}
+.animes-list .anime-container .see-more-button {
+  padding: 12px 25px; /* Aumenta o padding do botão */
+  font-size: 1.0em; /* Aumenta o tamanho da fonte do botão */
+}
+.animes-list button.top-animes-button {
+  padding: 12px 24px; /* Aumenta o padding para aumentar o tamanho do botão */
+  font-size: 0.9em; /* Aumenta o tamanho da fonte do botão */
+}
+.animes-list .search-label {
+  font-size: 24px; /* Aumenta o tamanho da fonte */
+}
+
+
+/* TopAnimes */
+
+
+body.top-animes {
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+}
+
+.top-animes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: url('https://i.pinimg.com/originals/80/e4/ac/80e4acf5ac644804ba6b328aa8376033.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  margin-top: -3%;
+  margin-left: -27%;
+  margin-right: -23%;
+  margin-bottom: -40%;
+}
+
+.top-animes .welcome-message {
+  color: white;
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.top-animes .search-label {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.top-animes .search-container input[type="text"] {
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 80%;
+  max-width: 500px;
+  border: 2px solid blue;
+  border-radius: 5px;
+}
+
+.top-animes button {
+  padding: 10px 20px;
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 30px;
+  margin-bottom: 7px;
+}
+
+.top-animes button:hover {
+  background-color: #ADD8E6;
+}
+
+.top-animes .anime-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.top-animes .anime-container .anime-image {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.top-animes .anime-container .see-more-button {
+  margin-top: 10px;
+}
+
+.top-animes .anime-container h3 {
+  text-align: center;
+  max-width: 50%;
+  margin: 0 auto;
+  font-size: 1.3em;
+  color: black;
+}
+
+.top-animes .anime-title {
+  font-size: 2.0em;
+}
+
+.top-animes .anime-container .see-more-button {
+  padding: 12px 25px;
+  font-size: 1.0em;
+}
+
+.top-animes button.top-animes-button {
+  padding: 12px 24px;
+  font-size: 0.9em;
+}
+
+.top-animes .search-label {
+  font-size: 24px;
+}
+
+/* TopAnimesDetails */
+
+body.top-animes-details {
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+}
+
+.top-animes-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: url('https://i.pinimg.com/originals/80/e4/ac/80e4acf5ac644804ba6b328aa8376033.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  margin-top: -20%;
+  margin-left: -27%;
+  margin-right: -23%;
+  margin-bottom: -20%;
+}
+
+.top-animes-details h1 {
+  color: white;
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.top-animes-details p {
+  color: black;
+  font-size: 22px;
+  margin-bottom: 15px;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.top-animes-details img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.top-animes-details button {
+  padding: 10px 20px;
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 0px;
+  margin-bottom: 7px;
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+.top-animes-details button:hover {
+  background-color: #ADD8E6;
+}
+
+/* CharacterList */
+
+body.character-list {
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+}
+
+.character-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: url('https://i.pinimg.com/originals/80/e4/ac/80e4acf5ac644804ba6b328aa8376033.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  margin-top: -4%;
+  margin-left: -27%;
+  margin-right: -23%;
+  margin-bottom: -20%;
+}
+
+.character-list button {
+  padding: 10px 20px;
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 30px;
+  margin-bottom: 7px;
+}
+
+.character-list button:hover {
+  background-color: #ADD8E6;
+}
+
+.character-list h1 {
+  color: white;
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.character-list img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+/* AnimeDetails */
+
+
+
+body.anime-details {
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+}
+
+.anime-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: url('https://i.pinimg.com/originals/80/e4/ac/80e4acf5ac644804ba6b328aa8376033.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  margin-top: -20%;
+  margin-left: -27%;
+  margin-right: -23%;
+  margin-bottom: -20%;
+}
+
+.anime-details h1 {
+  color: white;
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.anime-details p {
+  color: black;
+  font-size: 22px;
+  margin-bottom: 15px;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.anime-details img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.anime-details button {
+  padding: 10px 20px;
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 30px;
+  margin-bottom: 7px;
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+.anime-details button:hover {
+  background-color: #ADD8E6;
+}
+
+
+/* SearchAnimeDetails */
+
+
+body.search-anime-details {
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+}
+
+.search-anime-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: url('https://i.pinimg.com/originals/80/e4/ac/80e4acf5ac644804ba6b328aa8376033.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  margin-top: -20%;
+  margin-left: -27%;
+  margin-right: -23%;
+  margin-bottom: -20%;
+}
+
+.search-anime-details h1 {
+  color: white;
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.search-anime-details p {
+  color: black;
+  font-size: 22px;
+  margin-bottom: 15px;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.search-anime-details img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.search-anime-details button {
+  padding: 10px 20px;
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 30px;
+  margin-bottom: 7px;
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+.search-anime-details button:hover {
+  background-color: #ADD8E6;
+}
+
+
+/* CharactersDetails */
+
+
+body.characters-details {
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+}
+
+.characters-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: url('https://i.pinimg.com/originals/80/e4/ac/80e4acf5ac644804ba6b328aa8376033.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  margin-top: -20%;
+  margin-left: -27%;
+  margin-right: -23%;
+  margin-bottom: -20%;
+}
+
+.characters-details h1 {
+  color: white;
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.characters-details img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.characters-details button {
+  padding: 10px 20px;
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 30px;
+  margin-bottom: 7px;
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+.characters-details button:hover {
+  background-color: #ADD8E6;
+}
