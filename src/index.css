@@ -211,11 +211,15 @@ body.animes-list {
   text-align: center; /* Centraliza o texto */
   max-width: 50%; /* Define a largura máxima do texto */
   margin: 0 auto; /* Centraliza o elemento horizontalmente */
-  font-size: 1.3em; /* Aumenta o tamanho da fonte */
+  font-size: 1.2em; /* Aumenta o tamanho da fonte */
   color: black;
+  background-color: white;
+  padding: 2px;
+  margin-top: 20px;
 }
 .anime-title {
-  font-size: 2.0em;
+  font-size: 2.5em;
+  color: black
 }
 .animes-list .anime-container .see-more-button {
   padding: 12px 25px; /* Aumenta o padding do botão */
@@ -265,6 +269,16 @@ body.top-animes {
   color: white;
   font-size: 20px;
   margin-bottom: 20px;
+}
+.top-animess {
+  text-align: center;
+  max-width: 50%;
+  margin: 0 auto;
+  font-size: 1.3em;
+  color: black;
+  background-color: white;
+  padding: 2px;
+  margin-top: 20px;
 }
 
 .top-animes .search-container input[type="text"] {
@@ -360,7 +374,7 @@ body.top-animes-details {
 }
 
 .top-animes-details h1 {
-  color: white;
+  color: black;
   font-size: 3em;
   margin-bottom: 20px;
 }
@@ -371,6 +385,9 @@ body.top-animes-details {
   margin-bottom: 15px;
   margin-left: 20%;
   margin-right: 20%;
+  background-color: white;
+  padding: 2px;
+  margin-top: 20px;
 }
 
 .top-animes-details img {
@@ -415,9 +432,9 @@ body.character-list {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  margin-top: -4%;
-  margin-left: -27%;
-  margin-right: -23%;
+  margin-top: -7%;
+  margin-left: -200%;
+  margin-right: -200%;
   margin-bottom: -20%;
 }
 
@@ -437,7 +454,7 @@ body.character-list {
 }
 
 .character-list h1 {
-  color: white;
+  color: black;
   font-size: 3em;
   margin-bottom: 20px;
 }
@@ -487,6 +504,9 @@ body.anime-details {
   margin-bottom: 15px;
   margin-left: 20%;
   margin-right: 20%;
+  background-color: white;
+  padding: 2px;
+  margin-top: 20px;
 }
 
 .anime-details img {

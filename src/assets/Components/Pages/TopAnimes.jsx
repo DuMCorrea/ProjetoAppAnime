@@ -26,7 +26,7 @@ export const TopAnimes = () => {
                 {topAnimesList.data?.map((animes) => <div>
                     <h1>{animes.title}</h1>
                     <img onClick={() => navigate(`/anime/top-animes/${animes.mal_id}`)} src={animes.images.jpg.image_url}/>
-                    <p>{animes.synopsis.slice(0, 350)}...</p>
+                    <p className="top-animess">{animes.synopsis.slice(0, 350)}...</p>
                     <button onClick={() => navigate(`/anime/top-animes/${animes.mal_id}`)}>Saiba Mais</button>
                 </div>)}</div> : <h1>Aguarde!</h1>} 
         </div>
