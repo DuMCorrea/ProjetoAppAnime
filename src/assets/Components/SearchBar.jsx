@@ -8,7 +8,7 @@ export const SearchBar = ({ setNewList }) => {
   const debouncedValue = useDebounceSearch(searchList);
   const [debouncedSearchList, setDebouncedSearchList] = useState("");
 
-  console.log(debouncedValue)
+  console.log(debouncedValue);
 
   useEffect(() => {
     setDebouncedSearchList(debouncedValue);
@@ -22,7 +22,7 @@ export const SearchBar = ({ setNewList }) => {
         .catch((err) => `erro: ${err}`);
     };
 
-    if (debouncedSearchList.trim() !== '') {
+    if (debouncedSearchList.trim() !== "") {
       fetchData();
     }
   }, [searchList, debouncedSearchList]);

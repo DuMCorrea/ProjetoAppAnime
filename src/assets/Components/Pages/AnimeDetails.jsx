@@ -6,11 +6,12 @@ import { useLastLocation } from "../useLastLocation";
 
 export const AnimeDetails = () => {
   const { id } = useParams();
-  const { animesList, animesDetails, setAnimesDetails, setManualLocation} = useContext(AnimeContext);
+  const { animesList, animesDetails, setAnimesDetails, setManualLocation } =
+    useContext(AnimeContext);
   const navigate = useNavigate();
-  const location = useLocation()
+  const location = useLocation();
 
-  useVerifyName()
+  useVerifyName();
 
   useEffect(() => {
     if (animesList && animesList.data) {
@@ -18,11 +19,11 @@ export const AnimeDetails = () => {
         (anime) => anime.mal_id === parseInt(id)
       );
       setAnimesDetails(animes);
-      setManualLocation(location.pathname)
+      setManualLocation(location.pathname);
     }
   }, [id, animesList]);
 
-  useLastLocation()
+  useLastLocation();
 
   return (
     <div className="anime-details">
@@ -31,7 +32,9 @@ export const AnimeDetails = () => {
           <h1>{animesDetails.title}</h1>
           <img src={animesDetails.images.jpg.image_url} />
           <p>{animesDetails.synopsis}</p>
-          <button onClick={() => navigate(`/animes/characters/${id}`)}>Ver Personagens</button>
+          <button onClick={() => navigate(`/animes/characters/${id}`)}>
+            Ver Personagens
+          </button>
           <button onClick={() => navigate("/animeslist")}>Voltar</button>
         </div>
       )}

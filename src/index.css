@@ -466,6 +466,12 @@ body.character-list {
   margin-bottom: 20px;
 }
 
+.characters-details{
+  display: flex;
+  height: 100vh;
+  width: 200vh;
+}
+
 /* AnimeDetails */
 
 
@@ -595,6 +601,24 @@ body.search-anime-details {
 
 .search-anime-details button:hover {
   background-color: #ADD8E6;
+}
+
+/* SearchAnimesList */
+
+.anime-search{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 200vh;
+}
+
+.carregando{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 200vh;
 }
 
 
